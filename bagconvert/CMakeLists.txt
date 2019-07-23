@@ -9,7 +9,7 @@ SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/)
 # Include libraries
 find_package(Eigen3 REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system filesystem thread date_time)
-find_package(Matlab 3 REQUIRED)
+# find_package(Matlab 3 REQUIRED)
 
 
 # Find catkin (the ROS build system)
@@ -50,18 +50,18 @@ include_directories(
         src
         ${EIGEN3_INCLUDE_DIR}
         ${Boost_INCLUDE_DIRS}
-        ${MATLAB_INCLUDE_DIR}
+        # ${MATLAB_INCLUDE_DIR}
         ${catkin_INCLUDE_DIRS}
 )
 
 # Set link libraries used by all binaries
 list(APPEND parser_libraries
         ${Boost_LIBRARIES}
-        ${MATLAB_LIBRARIES}
-        ${MATLAB_MX_LIBRARY}
-        ${MATLAB_MEX_LIBRARY}
-        ${MATLAB_MAT_LIBRARY}
-        ${MATLAB_ENG_LIBRARY}
+        # ${MATLAB_LIBRARIES}
+        # ${MATLAB_MX_LIBRARY}
+        # ${MATLAB_MEX_LIBRARY}
+        # ${MATLAB_MAT_LIBRARY}
+        # ${MATLAB_ENG_LIBRARY}
         ${catkin_LIBRARIES}
 )
 
